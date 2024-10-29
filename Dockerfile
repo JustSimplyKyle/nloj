@@ -9,7 +9,8 @@ RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg -
 RUN echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | tee /etc/apt/sources.list.d/yarn.list
 RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
 RUN apt update -y
-RUN apt install -y rsync netcat nodejs yarn redis-server --no-install-recommends
+RUN apt install -y nodejs yarn --no-install-recommends
+#RUN apt install -y rsync netcat nodejs yarn redis-server --no-install-recommends
 
 ARG MYSQL_ROOT_PASSWORD
 ENV PASSWORD=$MYSQL_ROOT_PASSWORD
