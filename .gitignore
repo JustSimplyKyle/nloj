@@ -18,9 +18,9 @@
 /tmp
 
 # Ignore all the testdata
-/td
 /public/*
 /public-tmp
+!/public/uploads/user
 !/public/fonts
 !/public/images
 !/public/static
