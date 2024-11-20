@@ -15,5 +15,6 @@ if mysqldump -u root -p'nlhs' tioj_production > "$BACKUP_FILE"; then
     git add public
 	git add db_backup.sh
     git commit -m "feat: database-update"
+    git pull
     git push
 fi
