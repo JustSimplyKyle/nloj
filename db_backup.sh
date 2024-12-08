@@ -8,7 +8,7 @@ BACKUP_FILE="backup.sql"
 cd "$BACKUP_DIR" || exit 1
 
 # Perform database backup
-if mysqldump -u root -p'nlhs' tioj_production > "$BACKUP_FILE"; then
+if mysqldump -u root -p'nlhs' tioj_production --no-create-info > "$BACKUP_FILE"; then
     git pull
     # Git operations
     git add "$BACKUP_FILE"
